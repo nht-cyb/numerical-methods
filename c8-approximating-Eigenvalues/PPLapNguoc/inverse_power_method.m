@@ -22,7 +22,7 @@ for k = 1:max_iter
     w = (A \ v);                               % Giai A * w = v
     v_new = w / norm(w);                       % Chuan hoa vector v
     % Kiem tra sai so hoi tu
-    if norm(v_new - v) < tol
+    if min(norm(v_new - v), norm(v_new + v)) < tol   % v may flip sign when lambda < 0
         break;
     end
     v = v_new;                                 % Cap nhat vector rieng v

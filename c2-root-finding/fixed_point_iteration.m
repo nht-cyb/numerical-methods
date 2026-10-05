@@ -15,7 +15,7 @@
 %   opts    - (OPTIONAL) (1×1 struct) solver options
 %       • k_max      - (1×1 double) maximimum number of iterations 
 %                      (defaults to 200)
-%       • TOL        - (1×1 double) tolerance (defaults to 10⁻¹⁰)
+%       • TOL        - (1×1 double) tolerance (OPTIONAL 3rd argument, defaults to 10⁻²)
 %
 % -------
 % OUTPUT:
@@ -25,9 +25,9 @@
 %   c_all   - (1×(k+1) double) tat ca cac diem co dinh tim duoc
 %
 %==========================================================================
-function [c,k,c_all] = fixed_point_iteration(f,x0)
+function [c,k,c_all] = fixed_point_iteration(f,x0,TOL)
         k_max = 200;
-        TOL = 1e-2;
+        if nargin < 3, TOL = 1e-2; end
     % ----------------------
     % Fixed-point iteration.
     % ----------------------
@@ -35,7 +35,7 @@ function [c,k,c_all] = fixed_point_iteration(f,x0)
     if f(x0) == x0
         c = x0;
         k = 1;
-        c_all = x;
+        c_all = x0;
         return
     end
     

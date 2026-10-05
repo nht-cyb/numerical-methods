@@ -67,6 +67,6 @@ for k=1:length(u)
          (y(t+1)-M(t+1)*h(t)^2/6)*(u(k)-x(t))/h(t);   
      Sdot(k)=-M(t)*(x(t+1)-u(k))^2/2/h(t)+M(t+1)*(u(k)-x(t))^2/2/h(t)+...
          (y(t+1)-y(t))/h(t)-(M(t+1)-M(t))/6*h(t);
-     Sddot(k)=M(t)*(x(t+1)-u(t))/h(t) + M(t+1)*(u(t)-x(t))/h(t);
+     Sddot(k)=M(t)*(x(t+1)-u(k))/h(t) + M(t+1)*(u(k)-x(t))/h(t);
 end
 end

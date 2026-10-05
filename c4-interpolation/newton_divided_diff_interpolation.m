@@ -11,7 +11,7 @@ for k=1:n
    L(k,1)=y(k);
 end
 for k=2:n 
-  for m=1:n-k                     
+  for m=1:n-k+1                    
        L(m,k)=(L(m,k-1)-L(m+1,k-1))/(x(m)-x(m+(k-1)));
   end
 end
