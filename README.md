@@ -16,8 +16,6 @@ Some comments, prompts and notebook text are in Vietnamese.
 | [`c7-ordinary-differential-equations`](c7-ordinary-differential-equations) | Initial value problems | Euler, Heun, midpoint, Taylor, Runge–Kutta 4, Adams–Bashforth / Adams–Moulton predictor–corrector |
 | [`c8-approximating-Eigenvalues`](c8-approximating-Eigenvalues) | Eigenvalues | Power method (`PPLuyThua`), inverse power method (`PPLapNguoc`), Rayleigh quotient iteration (`PPRayleigh`), QR algorithm (`PP-QR`) |
 
-[`references/`](references) holds the course reference material.
-
 ## Running
 
 **MATLAB scripts (`.m`)** — open the folder in MATLAB (or GNU Octave) and run the script, or call the function with your own inputs, e.g.
